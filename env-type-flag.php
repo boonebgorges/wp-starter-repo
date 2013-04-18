@@ -10,8 +10,7 @@
  * Adds 'local environment' tab
  */
 function bbg_env_type_flag() {
-	if ( defined( 'ENV_TYPE' ) && in_array( ENV_TYPE, 'local', 'staging' ) ) {
-
+	if ( defined( 'ENV_TYPE' ) && 'production' !== ENV_TYPE ) {
 		?>
 
 		<style type="text/css">
@@ -32,7 +31,7 @@ function bbg_env_type_flag() {
 		</style>
 
 		<div id="env-type-flag">
-			<?php echo 'staging' == ENV_TYPE ? 'STAGING' : 'LOCAL' ?> ENVIRONMENT
+			<?php strtoupper( ENV_TYPE ) ?> ENVIRONMENT
 		</div>
 
 		<?php
