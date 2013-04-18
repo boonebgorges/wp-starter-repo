@@ -31,7 +31,7 @@ function bbg_env_type_flag() {
 		</style>
 
 		<div id="env-type-flag">
-			<?php strtoupper( ENV_TYPE ) ?> ENVIRONMENT
+			<?php echo strtoupper( ENV_TYPE ) ?> ENVIRONMENT
 		</div>
 
 		<?php
